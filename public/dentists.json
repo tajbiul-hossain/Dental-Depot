@@ -1,0 +1,20 @@
+[
+  {
+    "id": "DENTIST1",
+    "name": "Michael Barley",
+    "expertise": "Implant Expert",
+    "img": "../images/dentist/dentist1.png"
+  },
+  {
+    "id": "DENTIST2",
+    "name": "Ronda J. Collins",
+    "expertise": "Cosmetic Dentistry",
+    "img": "../images/dentist/dentist2.png"
+  },
+  {
+    "id": "DENTIST3",
+    "name": "Richard Brown",
+    "expertise": "Oral Surgery",
+    "img": "../images/dentist/dentist3.png"
+  }
+]

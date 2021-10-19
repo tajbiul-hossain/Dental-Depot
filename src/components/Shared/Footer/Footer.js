@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-12 col-md-5 text-start">
             <h4 className="name">Dental Depot</h4>
-            <ul className="footer-list p-0">
+            <ul className="footer-list">
               <li style={{ fontWeight: "300" }}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                 28 Runkin Street, Chittagong, 1123 Bangladesh
@@ -56,10 +56,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-3 text-center text-lg-start ps-4">
+          <div className="social col-12 col-md-3 text-start ps-md-4">
             <h6 className="text-capitalize">follow us</h6>
             <p>let us be social</p>
-            <div className="social-icons d-flex align-items-center justify-content-center justify-content-lg-start">
+            <div className="social-icons d-flex align-items-center justify-content-start mb-4">
               <NavLink className="icon" to="/">
                 <i className="fab fa-facebook-f"></i>
               </NavLink>

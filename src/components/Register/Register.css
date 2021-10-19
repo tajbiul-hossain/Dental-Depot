@@ -20,3 +20,21 @@ form .input-label {
   box-shadow: 0 0 15px 1px #00aeff;
   border-radius: 1rem;
 }
+
+@media only screen and (max-width: 767px) {
+  .form-card {
+    width: 90%;
+  }
+  form .form-control {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .form-card {
+    width: 100%;
+  }
+  form .form-control {
+    width: 100%;
+  }
+}

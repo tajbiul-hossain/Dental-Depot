@@ -20,15 +20,9 @@ const Header = () => {
         <Container className="font-link">
           <Navbar.Brand href="/home">Dental Depot</Navbar.Brand>
           <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
+          <Navbar.Collapse>
             <Nav.Link as={HashLink} to="/home#home">
               Home
-            </Nav.Link>
-            <Nav.Link as={HashLink} to="/home#services">
-              Services
-            </Nav.Link>
-            <Nav.Link as={HashLink} to="/home#dentists">
-              Dentists
             </Nav.Link>
             <Nav.Link as={HashLink} to="/pricing">
               Pricing
@@ -37,9 +31,11 @@ const Header = () => {
               Appointment
             </Nav.Link>
             {user?.email ? (
-              <div className="d-flex align-items-center">
-                <Nav.Link className="username">{user.displayName}</Nav.Link>
-                <img className="user-image" src={user.photoURL} alt="" />
+              <div className="d-lg-flex align-items-center">
+                <div className="d-flex  align-items-center">
+                  <Nav.Link className="username">{user.displayName}</Nav.Link>
+                  <img className="user-image" src={user.photoURL} alt="" />
+                </div>
                 <button
                   onClick={logOut}
                   className="btn default-btn register-btn"

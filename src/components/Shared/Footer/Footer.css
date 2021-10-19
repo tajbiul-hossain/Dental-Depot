@@ -19,6 +19,11 @@
   color: #00aeff;
   margin-right: 0.5rem;
 }
+
+.footer-list {
+  padding: 0;
+}
+
 .footer-list li {
   margin-bottom: 1rem;
   list-style: none;
@@ -45,4 +50,27 @@
   margin-top: 1rem;
   width: 100%;
   border-top: 1px solid #00aeff;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer .opening {
+    margin: 1rem 0;
+  }
+  .social {
+    text-align: start;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .footer .name {
+    font-size: 1.8rem;
+  }
+  .footer .opening {
+    font-size: 0.9rem;
+    padding-right: 5rem;
+  }
+
+  .footer .footer-list {
+    font-size: 0.9rem;
+  }
 }

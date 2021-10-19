@@ -16,6 +16,7 @@ initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
+  const [redirectURL, setRedirectURL] = useState("");
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
@@ -26,14 +27,20 @@ const useFirebase = () => {
   };
 
   const signUpWithEmailAndPassword = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
+    return createUserWithEmailAndPassword(auth, email, password).finally(() => {
+      setLoading(false);
+    });
   };
 
-  const setUserName = (name) => {
+  const setUserName = (name, history, redirect_url) => {
+    setLoading(true);
     updateProfile(auth.currentUser, {
       displayName: name,
       photoURL:
         "https://github.com/tajbiul-hossain/dental-depot-images/blob/main/images/icon/avatar.png?raw=true",
+    }).then((result) => {
+      history.push(redirect_url);
+      setLoading(false);
     });
   };
 
@@ -48,6 +55,10 @@ const useFirebase = () => {
         setUser({});
       })
       .finally(() => setLoading(false));
+  };
+
+  const updateRedirectURL = (redirect_url) => {
+    setRedirectURL(redirect_url);
   };
 
   useEffect(() => {
@@ -65,11 +76,13 @@ const useFirebase = () => {
   return {
     user,
     loading,
+    redirectURL,
     signInUsingGoogle,
     signUpWithEmailAndPassword,
     logInWithEmailAndPassword,
     logOut,
     setUserName,
+    updateRedirectURL,
   };
 };
 

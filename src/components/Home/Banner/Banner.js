@@ -18,7 +18,7 @@ const Banner = () => {
             <p className="carousel-text">
               Contact us to find out what we have to offer you.
             </p>
-            <button className="btn default-btn me-3">Get Started</button>
+            <button className="btn default-btn me-md-3">Get Started</button>
             <button className="btn default-btn">Contact Us</button>
           </Carousel.Caption>
         </Carousel.Item>

@@ -3,7 +3,7 @@ import "./Dentist.css";
 const Dentist = ({ dentist }) => {
   const { name, img, expertise } = dentist;
   return (
-    <div className="col-lg-4 col-sm-6 col-12">
+    <div className="col-12 col-lg-4 text-center">
       <figure className="dentist-card font-link">
         <img alt="" src={img} />
         <figcaption>

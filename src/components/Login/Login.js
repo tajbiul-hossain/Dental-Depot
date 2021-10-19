@@ -3,7 +3,8 @@ import { Form } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 const Login = () => {
-  const { signInUsingGoogle, logInWithEmailAndPassword } = useAuth();
+  const { signInUsingGoogle, logInWithEmailAndPassword, updateRedirectURL } =
+    useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -11,6 +12,8 @@ const Login = () => {
   const location = useLocation();
   const history = useHistory();
   const redirect_url = location.state?.from || "/home";
+
+  updateRedirectURL(redirect_url);
 
   const handleGoogleSignIn = () => {
     signInUsingGoogle().then((result) => {

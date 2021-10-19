@@ -16,7 +16,7 @@ const BookAppointment = () => {
       <div className="container text-start font-link">
         <div className="row mt-4 align-items-center">
           <div
-            class="col-lg-4 text-white d-flex flex-column justify-content-center p-5"
+            class="col-lg-4 text-white d-flex flex-column justify-content-center p-md-5 p-3 mb-4"
             style={{ backgroundColor: "#00aeff" }}
           >
             <div>

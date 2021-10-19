@@ -1,23 +1,29 @@
-import { getMultiFactorResolver } from "@firebase/auth";
 import { React, useState } from "react";
 import { Form } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import "./Register.css";
 const Register = () => {
-  const { signInUsingGoogle, signUpWithEmailAndPassword, setUserName } =
-    useAuth();
+  const {
+    redirectURL,
+    signInUsingGoogle,
+    signUpWithEmailAndPassword,
+    setUserName,
+  } = useAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+
+  // const location = useLocation();
   const history = useHistory();
+  // const redirect_url = location.state?.from || "/home";
 
   const handleGoogleSignUp = () => {
     signInUsingGoogle().then((result) => {
-      history.push("/home");
+      history.push(redirectURL);
     });
   };
 
@@ -45,8 +51,7 @@ const Register = () => {
     signUpWithEmailAndPassword(email, password)
       .then((result) => {
         setError("");
-        setUserName(name);
-        history.push("/");
+        setUserName(name, history, redirectURL);
       })
       .catch((error) => {
         setError(error.message);

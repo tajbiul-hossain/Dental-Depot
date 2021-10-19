@@ -60,3 +60,33 @@
   background-color: transparent;
   color: #00aeef;
 }
+
+@media only screen and (max-width: 767px) {
+  .caption {
+    top: 30%;
+  }
+  .carousel-title {
+    font-size: 1.8rem;
+  }
+  .carousel-text {
+    font-size: 1rem;
+  }
+
+  .default-btn {
+    margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .caption {
+    top: 15%;
+  }
+  .carousel-title {
+    font-size: 1.8rem;
+  }
+  .carousel-text {
+    font-size: 1rem;
+  }
+  .default-btn {
+    margin-bottom: 1rem;
+  }
+}

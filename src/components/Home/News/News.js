@@ -6,9 +6,9 @@ const News = ({ news }) => {
   return (
     <div className="news pb-3 font-link">
       <Col className="text-start">
-        <Card style={{ width: "25rem", height: "37rem" }}>
+        <Card>
           <Card.Img variant="top" src={img} style={{ width: "100%" }} />
-          <Card.Body className="p-5">
+          <Card.Body>
             <Card.Title className="mb-3">{name}</Card.Title>
             <Card.Text>{shortDesc}</Card.Text>
             <div className="d-flex news-comment">

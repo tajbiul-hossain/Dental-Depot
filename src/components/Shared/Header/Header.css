@@ -19,6 +19,9 @@
 .navbar .register-btn {
   color: #fff;
 }
+.navbar .navbar-collapse {
+  justify-content: end;
+}
 
 .navbar .register-btn:hover,
 .navbar .register-btn:focus {
@@ -39,4 +42,13 @@
   height: 3rem;
   border-radius: 50%;
   padding-right: 1rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar .navbar-collapse {
+    text-align: start;
+  }
+  .navbar .nav-link {
+    padding: 0;
+  }
 }

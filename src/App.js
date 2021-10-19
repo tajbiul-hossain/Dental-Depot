@@ -10,6 +10,7 @@ import Header from "./components/Shared/Header/Header";
 import AuthProvider from "./contexts/AuthProvider";
 import Notfound from "./components/NotFound/Notfound";
 import BookAppointment from "./components/BookAppointment/BookAppointment";
+import PriceTable from "./components/PriceTable/PriceTable";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/book">
               <BookAppointment />
+            </PrivateRoute>
+            <PrivateRoute path="/pricing">
+              <PriceTable />
             </PrivateRoute>
             <Route path="/login">
               <Login />

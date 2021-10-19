@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, FloatingLabel, Form, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
 const BookAppointment = () => {
   return (
     <div className="container mt-5">

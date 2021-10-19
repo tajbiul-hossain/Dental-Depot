@@ -18,14 +18,14 @@ const Details = () => {
       });
   }, []);
   return (
-    <div className="conatiner">
-      <div className="row mt-5">
-        <div className="col-12 col-md-6">
+    <div className="container">
+      <div className="row mt-5 align-items-center">
+        <div className="col-12 col-md-5">
           <img className="service-image" src={img} alt="" />
         </div>
-        <div className="col-12 col-md-6 text-start pe-5">
+        <div className="col-12 col-md-7 text-start">
           <h2 className="mb-3">{name}</h2>
-          <h2 className="service-price detailed-price">${price}</h2>
+          <h2 className="service-price detailed-price">Cost: ${price}</h2>
           <p className="service-desc fw-normal">{details}</p>
         </div>
       </div>

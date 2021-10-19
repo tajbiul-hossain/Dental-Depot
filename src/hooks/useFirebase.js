@@ -30,7 +30,11 @@ const useFirebase = () => {
   };
 
   const setUserName = (name) => {
-    updateProfile(auth.currentUser, { displayName: name });
+    updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL:
+        "https://github.com/tajbiul-hossain/dental-depot-images/blob/main/images/icon/avatar.png?raw=true",
+    });
   };
 
   const logInWithEmailAndPassword = (email, password) => {
@@ -50,7 +54,6 @@ const useFirebase = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        console.log(user);
       } else {
         setUser({});
       }

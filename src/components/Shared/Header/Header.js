@@ -1,11 +1,13 @@
 import React from "react";
 import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import useAuth from "../../../hooks/useAuth";
+
 const Header = () => {
   const { user, logOut } = useAuth();
+  const location = useLocation();
   return (
     <>
       <Navbar
@@ -28,15 +30,13 @@ const Header = () => {
             <Nav.Link as={HashLink} to="/home#dentists">
               Dentists
             </Nav.Link>
+            <Nav.Link as={HashLink} to="/book">
+              Appointment
+            </Nav.Link>
             {user?.email ? (
               <div className="d-flex align-items-center">
                 <Nav.Link className="username">{user.displayName}</Nav.Link>
-                <img
-                  className="user-image"
-                  src={user.photoURL}
-                  alt=""
-                  style={{ height: "2rem", borderRadius: "50%" }}
-                />
+                <img className="user-image" src={user.photoURL} alt="" />
                 <button
                   onClick={logOut}
                   className="btn default-btn register-btn"
@@ -44,18 +44,27 @@ const Header = () => {
                   Log out
                 </button>
               </div>
+            ) : location.pathname === "/register" ||
+              location.pathname === "/login" ? (
+              ""
             ) : (
-              <Nav.Link
-                as={Link}
-                to="/register"
-                className="btn default-btn register-btn"
-              >
-                Register
-              </Nav.Link>
+              <>
+                <Nav.Link
+                  as={Link}
+                  to="/login"
+                  className="btn default-btn register-btn"
+                >
+                  Login
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/register"
+                  className="ms-2 btn default-btn register-btn"
+                >
+                  Register
+                </Nav.Link>
+              </>
             )}
-            {/* <Navbar.Text>
-              Signed in as: <a href="#login">{user?.displayName}</a>
-            </Navbar.Text> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

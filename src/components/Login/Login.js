@@ -39,52 +39,57 @@ const Login = () => {
 
   return (
     <div className="container">
-      <h2 className="mt-5 font-link section-heading">Log In</h2>
-      <div className="heading-underline"></div>
-      <div>
-        <Form
-          className="d-flex justify-content-center"
-          onSubmit={handleEmailSignIn}
-        >
-          <div>
-            <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
-              <Form.Label className="input-label">Email address</Form.Label>
-              <Form.Control
-                onChange={handleEmailChange}
-                type="email"
-                placeholder="Enter email"
-                required
-              />
-            </Form.Group>
+      <div className="py-3 form-card">
+        <h2 className="font-link section-heading">Log In</h2>
+        <div className="heading-underline"></div>
+        <div>
+          <Form
+            className="d-flex justify-content-center"
+            onSubmit={handleEmailSignIn}
+          >
+            <div>
+              <Form.Group
+                className="mb-3 text-start"
+                controlId="formBasicEmail"
+              >
+                <Form.Label className="input-label">Email address</Form.Label>
+                <Form.Control
+                  onChange={handleEmailChange}
+                  type="email"
+                  placeholder="Enter email"
+                  required
+                />
+              </Form.Group>
 
-            <Form.Group
-              className="mb-3 text-start"
-              controlId="formBasicPassword"
-            >
-              <Form.Label className="input-label">Password</Form.Label>
-              <Form.Control
-                onChange={handlePasswordChange}
-                type="password"
-                placeholder="Password"
-                required
-              />
-            </Form.Group>
-            <p className="text-danger">{error}</p>
-            <button className="btn default-btn" type="submit">
-              Sign In
-            </button>
-            <p className="mt-3">
-              Do not have an account?{" "}
-              <Link to="/register" style={{ color: "#00aeff" }}>
-                Sign Up
-              </Link>
-            </p>
-            <h5>or</h5>
-            <button className="btn default-btn" onClick={handleGoogleSignIn}>
-              Google Sign In
-            </button>
-          </div>
-        </Form>
+              <Form.Group
+                className="mb-3 text-start"
+                controlId="formBasicPassword"
+              >
+                <Form.Label className="input-label">Password</Form.Label>
+                <Form.Control
+                  onChange={handlePasswordChange}
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+              </Form.Group>
+              <p className="text-danger">{error}</p>
+              <button className="btn default-btn" type="submit">
+                Sign In
+              </button>
+              <p className="mt-3">
+                Do not have an account?{" "}
+                <Link to="/register" style={{ color: "#00aeff" }}>
+                  Sign Up
+                </Link>
+              </p>
+              <h5>or</h5>
+              <button className="btn default-btn" onClick={handleGoogleSignIn}>
+                Google Sign In
+              </button>
+            </div>
+          </Form>
+        </div>
       </div>
     </div>
   );

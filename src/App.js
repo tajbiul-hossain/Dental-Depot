@@ -8,6 +8,8 @@ import Details from "./components/Home/serviceDetails/Details";
 import Footer from "./components/Shared/Footer/Footer";
 import Header from "./components/Shared/Header/Header";
 import AuthProvider from "./contexts/AuthProvider";
+import Notfound from "./components/NotFound/Notfound";
+import BookAppointment from "./components/BookAppointment/BookAppointment";
 
 function App() {
   return (
@@ -25,11 +27,17 @@ function App() {
             <PrivateRoute path="/details/:serviceId">
               <Details />
             </PrivateRoute>
+            <PrivateRoute path="/book">
+              <BookAppointment />
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+            <Route path="*">
+              <Notfound />
             </Route>
           </Switch>
           <Footer />

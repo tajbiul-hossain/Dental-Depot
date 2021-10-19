@@ -8,7 +8,7 @@ const Banner = () => {
         <Carousel.Item className="bg-gradient-overlay">
           <img
             className="d-block carousel-image"
-            src="images/banner/banner1.jpg"
+            src="https://github.com/tajbiul-hossain/dental-depot-images/blob/main/images/banner/banner1.jpg?raw=true"
             alt="First slide"
           />
           <Carousel.Caption className="caption font-link">
@@ -25,7 +25,7 @@ const Banner = () => {
         <Carousel.Item className="bg-gradient-overlay">
           <img
             className="d-block carousel-image"
-            src={"images/banner/banner2.jpg"}
+            src="https://github.com/tajbiul-hossain/dental-depot-images/blob/main/images/banner/banner2.jpg?raw=true"
             alt="Second slide"
           />
 
@@ -41,7 +41,7 @@ const Banner = () => {
         <Carousel.Item className="bg-gradient-overlay">
           <img
             className="d-block carousel-image"
-            src={"images/banner/banner3.jpg"}
+            src="https://github.com/tajbiul-hossain/dental-depot-images/blob/main/images/banner/banner3.jpg?raw=true"
             alt="Third slide"
           />
 

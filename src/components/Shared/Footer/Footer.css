@@ -24,6 +24,10 @@
   list-style: none;
 }
 
+.footer .opening {
+  padding-right: 10rem;
+}
+
 .footer .social-icons .icon {
   padding-right: 25px;
   transition: all 0.3s ease 0s;

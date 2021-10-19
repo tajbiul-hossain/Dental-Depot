@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-12 col-md-4 text-start pe-5">
+          <div className="col-12 col-md-4 text-start opening">
             <h5 className="mb-4">Opening Hours</h5>
             <div>
               <div

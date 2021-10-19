@@ -16,28 +16,27 @@
   color: #00aeef;
 }
 
-.navbar .default-btn {
-  min-width: 120px;
-  height: 46px;
-  line-height: 42px;
-  font-size: 14px;
-  font-weight: 600;
-  display: inline-block;
-  padding: 0 20px;
-  text-align: center;
-  text-transform: uppercase;
+.navbar .register-btn {
   color: #fff;
-  border-radius: 2px;
-  background-color: #00aeef;
-  -webkit-transition: all 500ms;
-  -o-transition: all 500ms;
-  transition: all 500ms;
-  border: 2px solid #00aeef;
 }
 
-.navbar .default-btn:hover,
-.navbar .default-btn:focus {
-  box-shadow: none;
-  background-color: transparent;
-  color: #00aeef;
+.navbar .register-btn:hover,
+.navbar .register-btn:focus {
+  color: #00aeff;
+}
+
+.navbar .username {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar .username:hover,
+.navbar .username:focus {
+  color: #000;
+}
+
+.navbar .user-image {
+  height: 3rem;
+  border-radius: 50%;
+  padding-right: 1rem;
 }

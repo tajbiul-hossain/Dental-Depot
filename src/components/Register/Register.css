@@ -1,0 +1,14 @@
+form .form-control {
+  width: 25rem;
+  border: 1px solid #00aeff;
+}
+
+form .form-control:focus {
+  box-shadow: none;
+}
+
+form .input-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #00aeff;
+}

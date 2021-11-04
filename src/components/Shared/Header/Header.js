@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
-import { HashLink } from "react-router-hash-link";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import useAuth from "../../../hooks/useAuth";
@@ -21,13 +20,13 @@ const Header = () => {
           <Navbar.Brand href="/home">Dental Depot</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse>
-            <Nav.Link as={HashLink} to="/home#home">
+            <Nav.Link as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/pricing">
+            <Nav.Link as={Link} to="/pricing">
               Pricing
             </Nav.Link>
-            <Nav.Link as={HashLink} to="/book">
+            <Nav.Link as={Link} to="/book">
               Appointment
             </Nav.Link>
             {user?.email ? (
